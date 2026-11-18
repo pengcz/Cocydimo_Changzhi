@@ -1,0 +1,24 @@
+./3d_model.py \
+    -domain_size 4.0 4.0 4.0 \
+    -coarse_grid_size 32 32 32 \
+    -rod_r0 2.0 2.0 0.0 \
+    -rod_r1 2.0 2.0 0.1 \
+    -rod_radius 1e-2 \
+    -phi_bc=-0.2e6 \
+    -n_initial_streamers 1 \
+    -dt 0.3e-9 \
+    -n_steps 4000 \
+    -min_dx 2e-4 \
+    -max_dx 0.2 \
+    -max_dx_electrode 2e-3 \
+    -derefine_nlevels 2 \
+    -siloname ./output/LongElectrode_LowerE_open_3D_ \
+    -L_E_max 10e-3 \
+    -steps_per_output 30 \
+    -memory_limit 48.0 \
+    -refine_E 3.0e6 \
+    -verbose 0 \
+    -print_performance \
+    -c_b=150 \
+    -open_lower_boundary \
+    "$@"
